@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Gombalan Buat Gebetan</title>
+    <style>
+        body {
+            background: #ffe4ec;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .gombal-box {
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(255, 0, 102, 0.1);
+            text-align: center;
+        }
+        .gombal {
+            font-size: 1.5em;
+            color: #e75480;
+            margin-bottom: 20px;
+        }
+        button {
+            background: #e75480;
+            color: #fff;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #c2185b;
+        }
+    </style>
+</head>
+<body>
+    <div class="gombal-box">
+        <div class="gombal" id="gombalText">
+            Kamu tahu nggak, kenapa aku suka belajar matematika? Karena setiap menghitung, yang ada di pikiranku cuma kamu.
+        </div>
+        <button onclick="gantiGombal()">Gombal Lagi!</button>
+    </div>
+    <script>
+        const gombalan = [
+            "Kamu tahu nggak, kenapa aku suka belajar matematika? Karena setiap menghitung, yang ada di pikiranku cuma kamu.",
+            "Kalau kamu bintang, aku mau jadi langitnya. Biar aku selalu bisa melihat kamu bersinar.",
+            "Aku nggak butuh peta, karena hatiku selalu tahu jalan pulang ke kamu.",
+            "Kopi pagi ini kurang manis, kayaknya butuh senyuman kamu deh.",
+            "Kalau disuruh milih antara napas sama kamu, aku pilih kamu. Soalnya tanpa kamu, aku nggak bisa hidup.",
+            "Kamu itu kayak wifi, kalau deket kamu hati aku langsung konek.",
+            "Aku nggak jago fisika, tapi aku yakin gaya gravitasi yang bikin aku jatuh cinta sama kamu.",
+            "Kamu itu seperti charger, selalu bisa mengisi hari-hariku yang lowbat.",
+            "Kalau kamu jadi bunga, aku rela jadi lebahnya. Biar bisa terus dekat sama kamu."
+            
+        ];
+
+        function gantiGombal() {
+            const idx = Math.floor(Math.random() * gombalan.length);
+            document.getElementById('gombalText').innerText = gombalan[idx];
+        }
+    </script>
+</body>
+</html>
